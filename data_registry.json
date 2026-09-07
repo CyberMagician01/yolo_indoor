@@ -20,7 +20,8 @@
   "predictions": {
     "type": "model_predictions_not_ground_truth",
     "raw": "annotations/raw_pose/",
-    "final": "annotations/final/"
+    "final": "annotations/final/",
+    "selected": "versions/v4_indoor_appearance_iomin20_20260908/"
   },
   "frames": {
     "location": "ModelScope:video_frames/",
@@ -33,8 +34,10 @@
   "pipeline": {
     "retention_frames": 150,
     "max_missing_interpolation_frames": 90,
-    "post_interpolation_deletion": false,
-    "optical_flow_enabled": false
+    "optical_flow_enabled": false,
+    "selected_entrypoint": "run_appearance20.py",
+    "selected_interpolation_overlap_threshold": 0.2,
+    "legacy_post_interpolation_deletion": false
   },
   "entrypoints": [
     "retrain_indoor_yolo_v3_123",
